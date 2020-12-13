@@ -1,27 +1,68 @@
-# AngularUnsplashApi
+# :zap: Angular Unsplash API
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+* Angular 11 dev app that displays a random photo from the [Unsplash Developers](https://unsplash.com/developers) API.
 
-## Development server
+*** Note: to open web links in a new window use: _ctrl+click on link_**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## :page_facing_up: Table of contents
 
-## Code scaffolding
+* [:zap: Angular Unsplash API](#zap-angular-unsplash-api)
+  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:books: General info](#books-general-info)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal_strength: Technologies](#signal_strength-technologies)
+  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:computer: Code Examples](#computer-code-examples)
+  * [:cool: Features](#cool-features)
+  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clap: Inspiration](#clap-inspiration)
+  * [:envelope: Contact](#envelope-contact)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## :books: General info
 
-## Build
+* Uses rxjs pluck method to get just one photo url from the API response.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## :camera: Screenshots
 
-## Running unit tests
+![Example screenshot](./img/unsplash.png).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## :signal_strength: Technologies
 
-## Running end-to-end tests
+* [Angular v11](https://angular.io/)
+* [Angular HttpClient](https://angular.io/guide/http) module used to communicate with back-end services via the XMLHttpRequest browser interface.
+* [RxJS Library v6](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observables](http://reactivex.io/documentation/observable.html).
+* [Angular Material Design v11](https://material.angular.io/) - [mat-card](https://material.angular.io/components/card/overview).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## :floppy_disk: Setup
 
-## Further help
+* Run `npm i` to install dependencies.
+* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app does automatically reload if you change any of the source files.
+* Run `ng build --prod` to create build files in `docs` folder. These will be deployed to github-pages. You need to copy the `index.html` file in the `docs` folder and paste it the same folder with a new name of `404.html`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## :computer: Code Examples
+
+* extract from `` to tba.
+
+```typescript
+
+  // function to get ...
+
+
+```
+
+## :cool: Features
+
+* Angular httpClient used to get data from an API.
+
+## :clipboard: Status & To-Do List
+
+* Status: Working but not complete
+* To-Do: Add API photo data to mat-card
+
+## :clap: Inspiration
+
+* [Unsplash](https://unsplash.com/) - source of free images
+
+## :envelope: Contact
+
+* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)

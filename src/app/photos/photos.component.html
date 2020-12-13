@@ -1,0 +1,21 @@
+<div class="container">
+  <mat-card class="photo-card">
+    <mat-card-header>
+      <div mat-card-avatar class="card-header-image"></div>
+      <mat-card-title>Unsplash Random Image</mat-card-title>
+      <mat-card-subtitle>Title</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      *ngIf="photoUrl"
+      [src]="photoUrl"
+      alt="Unsplash random image"
+    />
+    <mat-card-content>
+      <p>Detail</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-fab color="accent" (click)="onChangePhoto()">Change</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
