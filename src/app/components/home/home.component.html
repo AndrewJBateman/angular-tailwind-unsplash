@@ -1,0 +1,35 @@
+<head>
+  <meta name="description" content="Home page shows random Unsplash images" />
+</head>
+<body>
+  <div class="max-w-xs rounded overflow-hidden shadow-lg py-4 mx-auto">
+    <img
+      class="w-full"
+      *ngIf="photoUrl"
+      [src]="photoUrl"
+      alt="{{ photoAltDescription }}"
+    />
+    <div class="px-4 py-4 items-center">
+      <div *ngIf="photoAuthor.length > 4" class="font-bold text-md mb-2 text-center text-blue-900">
+        Photo by {{ photoAuthor }}
+      </div>
+      <p *ngIf="photoDescription != null" class="text-grey-darker text-base text-center">
+        {{ photoDescription }}
+      </p>
+    </div>
+    <div class="px-4 py-4 text-center">
+      <span
+        *ngIf="photoLocation != null" class="inline-block bg-gray-200 shadow-lg rounded-md px-3 py-1 text-sm font-semibold text-grey-darker mr-2"
+        >Photo taken in: {{ photoLocation }}</span
+      >
+    </div>
+    <div class="px-4 text-center">
+      <button
+        (click)="openLink()"
+        class="w-full/2 rounded-lg px-2 py-2 border-b-4 border-l-2 shadow-lg bg-blue-900 text-white font-bold focus:outline-none"
+      >
+        See on Unsplash
+      </button>
+    </div>
+  </div>
+</body>

@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/angular-unsplash-api'),
+      dir: require('path').join(__dirname, './coverage/angular-tailwind-unsplash'),
       subdir: '.',
       reporters: [
         { type: 'html' },

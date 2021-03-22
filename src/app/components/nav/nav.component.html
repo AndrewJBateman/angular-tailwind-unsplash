@@ -1,0 +1,41 @@
+<nav
+  class="font-sans flex text-center content-center flex-row justify-between pt-1 pl-1 pr-3 shadow sm:items-baseline w-full"
+>
+  <!--navbar LHS-->
+  <div class="self-center">
+    <a
+      class="nav-link"
+      aria-label="home nav link"
+      routerLink="/"
+      routerLinkActive="nav-link-active"
+    >
+      <div class="text-center flex mx-2">
+        <img
+          class="nav-left-icon mr-2"
+          src="./../../../assets/unsplash.png"
+          width="30" height="30"
+          alt="Unsplash image of butterfly"
+        />
+        <!-- <p class="pt-3">Unsplash Dev.</p> -->
+      </div>
+    </a>
+  </div>
+
+  <!--navbar RHS-->
+  <div class="self-center">
+    <a
+      class="nav-right nav-link"
+      aria-label="about nav link"
+      routerLink="/about"
+      routerLinkActive="nav-link-active"
+      >About</a
+    >
+    <a
+      class="nav-right nav-link"
+      aria-label="contact nav link"
+      routerLink="/contact"
+      routerLinkActive="nav-link-active"
+      >Contact</a
+    >
+  </div>
+</nav>
