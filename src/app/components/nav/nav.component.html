@@ -1,5 +1,5 @@
 <nav
-  class="font-sans flex text-center content-center flex-row justify-between pt-1 pl-1 pr-3 shadow sm:items-baseline w-full"
+  class="flex flex-row content-center justify-between w-full font-sans text-center shadow sm:items-baseline"
 >
   <!--navbar LHS-->
   <div class="self-center">
@@ -8,15 +8,16 @@
       aria-label="home nav link"
       routerLink="/"
       routerLinkActive="nav-link-active"
+      [routerLinkActiveOptions]="{ exact: true }"
     >
-      <div class="text-center flex mx-2">
+      <div class="flex mx-2">
         <img
-          class="nav-left-icon mr-2"
+          class="mr-2 nav-left-icon"
           src="./../../../assets/unsplash.png"
           width="30" height="30"
           alt="Unsplash image of butterfly"
         />
-        <!-- <p class="pt-3">Unsplash Dev.</p> -->
+        <p class="pt-1">Unsplash</p>
       </div>
     </a>
   </div>

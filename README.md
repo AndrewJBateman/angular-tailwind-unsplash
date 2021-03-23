@@ -64,20 +64,24 @@
 * `photo.service.ts` - code to fetch Unsplash photo data and return it
 
 ```typescript
-this.photoData = this.http
-  .get(
-    `${this.baseUrl}/photos/random?query=butterflies&orientation=squarish`,
-    httpOptions
-  )
-  .pipe(
-    tap((data: any) => console.log('photodata: ', data)),
-    take(1),
-    share(),
-    catchError((err) => {
-      return throwError(err);
-    })
-  ) as Observable<IUnsplashResponse>;
-return this.photoData;
+photoQuery() {
+  this.photoData = this.http
+    .get(
+      `${this.baseUrl}/photos/random?query=butterflies&orientation=landscape`,
+      httpOptions
+    )
+    .pipe(
+      tap((data: any) => console.log('photodata: ', data)),
+      take(1),
+      catchError((err) => {
+        return throwError(
+          'There was a problem fetching user data from Github API, error: ',
+          err
+        );
+      })
+    ) as Observable<IUnsplashResponse>;
+  return this.photoData;
+}
 ```
 
 ## :cool: Features
@@ -88,7 +92,7 @@ return this.photoData;
 
 ## :clipboard: Status & To-Do List
 
-* Status: In work
+* Status: Working
 * To-Do: add pwa, tests, publish
 
 ## :clap: Inspiration

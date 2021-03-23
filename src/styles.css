@@ -25,43 +25,14 @@
 
   .nav-link-active {
     color: #0000ff !important;
-    font-weight: bold;
   }
 
   .unsplash-blue {
     background-color: #7ec8e3;
   }
 
-  .search-bar,
-  .column-header {
-    background-color: rgb(245, 243, 243);
-    @apply shadow-xl;
-  }
-
-  .input-form {
-    background-color: rgb(245, 243, 243);
-  }
-
   .info-card {
     background-color: rgb(245, 243, 243);
     @apply rounded-lg;
-  }
-
-  .table-cell {
-    background-color: rgb(245, 243, 243);
-    @apply px-2;
-  }
-
-  .table-text-left {
-    @apply text-gray-900 font-bold;
-  }
-
-  .table-text-right {
-    @apply text-gray-600 text-xs;
-  }
-
-  .column-header {
-    background-color: #2f4e96;
-    @apply p-2;
   }
 }

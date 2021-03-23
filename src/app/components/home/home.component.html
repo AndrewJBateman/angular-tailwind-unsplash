@@ -1,35 +1,73 @@
 <head>
   <meta name="description" content="Home page shows random Unsplash images" />
 </head>
-<body>
-  <div class="max-w-xs rounded overflow-hidden shadow-lg py-4 mx-auto">
-    <img
-      class="w-full"
-      *ngIf="photoUrl"
-      [src]="photoUrl"
-      alt="{{ photoAltDescription }}"
-    />
-    <div class="px-4 py-4 items-center">
-      <div *ngIf="photoAuthor.length > 4" class="font-bold text-md mb-2 text-center text-blue-900">
-        Photo by {{ photoAuthor }}
+
+<body class="py-4">
+  <!--use angular async pipe to display Unsplash photo observable-->
+  <ng-container *ngIf="photoData$ | async as photoData">
+    <div class="max-w-xs mx-auto my-4 overflow-hidden rounded shadow-lg">
+      <img
+        class="w-full h-auto w-320"
+        [src]="photoData.body.urls.small"
+        alt="{{ photoData.body.alt_description }}"
+        (click)="openLink(photoData.body.urls.full)"
+      />
+
+      <div class="items-center px-4 py-4">
+        <!--description of photo-->
+        <p
+          *ngIf="photoData.body.description != null; else altDescription"
+          class="text-base text-center text-grey-darker"
+        >
+          "{{ photoData.body.description }}"
+        </p>
+        <ng-template #altDescription>
+          <p
+            *ngIf="photoData.body.alt_description != null; else noDescription"
+            class="text-base text-center text-grey-darker"
+          >
+            "{{ photoData.body.alt_description }}"
+          </p>
+        </ng-template>
+        <ng-template #noDescription>
+          <p class="text-base text-center text-grey-darker">
+            "No description supplied - just enjoy a photo without words"
+          </p>
+        </ng-template>
+
+        <!--name of photographer-->
+        <div
+          class="mt-4 font-bold text-center text-blue-900 text-md"
+          *ngIf="
+            photoData.body.user.first_name || photoData.body.user.last_name
+          "
+        >
+          Photo by {{ photoData.body.user.first_name }}
+          {{ photoData.body.user.last_name }}
+        </div>
       </div>
-      <p *ngIf="photoDescription != null" class="text-grey-darker text-base text-center">
-        {{ photoDescription }}
-      </p>
-    </div>
-    <div class="px-4 py-4 text-center">
-      <span
-        *ngIf="photoLocation != null" class="inline-block bg-gray-200 shadow-lg rounded-md px-3 py-1 text-sm font-semibold text-grey-darker mr-2"
-        >Photo taken in: {{ photoLocation }}</span
+
+      <!--location-->
+      <div
+        class="px-4 py-4 text-center"
+        *ngIf="photoData.body.location.name != null"
       >
+        <span
+          class="inline-block px-3 mr-2 font-semibold bg-gray-200 rounded-md shadow-lg py-line-1 text-grey-darker"
+          >
+          Taken in: {{ photoData.body.location.name }}</span
+        >
+      </div>
+
+      <!--button to change photo-->
+      <div class="px-4 py-4 text-center">
+        <button
+          (click)="getPhoto()"
+          class="px-2 py-2 font-bold text-white bg-blue-900 border-b-4 border-l-2 rounded-lg shadow-lg w-full/2 focus:outline-none"
+        >
+          Change photo
+        </button>
+      </div>
     </div>
-    <div class="px-4 text-center">
-      <button
-        (click)="openLink()"
-        class="w-full/2 rounded-lg px-2 py-2 border-b-4 border-l-2 shadow-lg bg-blue-900 text-white font-bold focus:outline-none"
-      >
-        See on Unsplash
-      </button>
-    </div>
-  </div>
+  </ng-container>
 </body>
