@@ -34,7 +34,7 @@
 
 ## :camera: Screenshots
 
-| ![Angular page](./img/home.png) | ![[Angular page](./img/about.png) | ![[Angular page](./img/contact.png) |
+| ![Angular page](./img/home.png) | ![Angular page](./img/about.png) | ![Angular page](./img/contact.png) |
 |:---:|:---:|:---:|
 | Home | About | Contact |
 
