@@ -3,14 +3,9 @@
 @import "tailwindcss/utilities";
 
 @layer components {
-  main {
-    padding-top: 0rem;
-    padding-left: 0 !important;
-  }
-
   nav {
     border-bottom: 4px solid #000c66;
-    background: white;
+    background: rgb(245, 243, 243);
     height: 4rem;
   }
 
@@ -20,7 +15,7 @@
   }
 
   .nav-right {
-    @apply ml-2 rounded hover:bg-gray-50;
+    @apply mx-4 rounded hover:bg-gray-50;
   }
 
   .nav-link-active {
@@ -33,6 +28,6 @@
 
   .info-card {
     background-color: rgb(245, 243, 243);
-    @apply rounded-lg;
+    @apply rounded-lg shadow-lg
   }
 }
