@@ -9,6 +9,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent, NavComponent, HomeComponent, NotFoundComponent],
@@ -17,6 +19,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent],

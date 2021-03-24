@@ -30,20 +30,23 @@
 * About and Contact pages give more information on app using Tailwind css cards
 * To build for production Tailwind’s purge option is used to tree-shake unused styles and optimize final build size.
 * [rxjs take(1) operater](https://advancedweb.hu/rxjs-the-differences-between-first-take-1-and-single/) used to take first element from the Unsplash & Github observable streams then close them, so unsubscribing is not necessary.
+* The Github API does not require an API key. The Unsplash API does.
 
 ## :camera: Screenshots
 
-![Example screenshot](./img/unsplash.png)
-![Example screenshot](./img/home.jpg)
-![Example screenshot](./img/about.jpg)
-![Example screenshot](./img/contact.jpg)
+| ![Angular page](./img/home.png) | ![[Angular page](./img/about.png) | ![[Angular page](./img/contact.png) |
+|:---:|:---:|:---:|
+| Home | About | Contact |
 
 ## :signal_strength: Technologies
 
 * [Angular framework v11](https://angular.io/)
+* [Angular async pipes](https://angular.io/api/common/AsyncPipe) used with Unsplash asynchronous Observable objects
 * [Reactive Extensions Library for Javascript rxjs v6](https://rxjs.dev/)
 * [Tailwindcss v2](https://tailwindcss.com/) CSS framework
-* [Angular PWA](https://angular.io/guide/service-worker-getting-started)
+* [Angular PWA](https://angular.io/guide/service-worker-getting-started) - app uses service workers so app will stay up if there is a loss of network - all necessary files are cached, including index.html, icons etc.
+* [http-server](https://www.npmjs.com/package/http-server) command-line http server to view the PWA
+* [Netlify CLI](https://www.npmjs.com/package/netlify-cli) to deploy app on Netlify
 
 ## :floppy_disk: Setup
 
@@ -61,7 +64,7 @@
 
 ## :computer: Code Examples
 
-* `photo.service.ts` - code to fetch Unsplash photo data and return it
+* `photo.service.ts` - code to fetch Unsplash photo data and return it as an Observable
 
 ```typescript
 photoQuery() {
@@ -86,14 +89,13 @@ photoQuery() {
 
 ## :cool: Features
 
-* The Github API does not require an API key
 * Lazy-loading of about and contact pages
-* Tailwind build for production css purge results in a very small styles bundle (xxxkB latest)
+* Tailwind build for production css purge results in a very small styles bundle (about 7kB)
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working
-* To-Do: add pwa, tests, publish
+* Status: Working. Converted to PWA
+* To-Do: tests, publish
 
 ## :clap: Inspiration
 
