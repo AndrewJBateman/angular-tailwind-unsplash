@@ -7,4 +7,3 @@ export const environment = {
     name: 'Unsplash Images'
   },
 };
-''

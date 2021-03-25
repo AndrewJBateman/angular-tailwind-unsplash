@@ -38,6 +38,7 @@
 | ![Angular page](./img/home.png) | ![Angular page](./img/about.png) | ![Angular page](./img/contact.png) |
 |:---:|:---:|:---:|
 | Home | About | Contact |
+
 ![Angular page](./img/lighthouse-home.jpg)
 ![Angular page](./img/lighthouse-about.jpg)
 ![Angular page](./img/lighthouse-contact.jpg)
@@ -45,8 +46,8 @@
 ## :signal_strength: Technologies
 
 * [Angular framework v11](https://angular.io/)
-* [Angular PWA](https://angular.io/guide/service-worker-getting-started) - app uses service workers so app will stay up if there is a loss of network - all necessary files are cached, including index.html, icons etc.
-* [Server-side rendering (SSR) with Angular Universal](https://angular.io/guide/universal) to render app on an express server
+* [Angular PWA v11](https://angular.io/guide/service-worker-getting-started) - app uses service workers so app will stay up if there is a loss of network - all necessary files are cached, including index.html, icons etc.
+* [Server-side rendering (SSR) with Angular Universal v11](https://angular.io/guide/universal) to render app on an express.js server
 * [Angular async pipes](https://angular.io/api/common/AsyncPipe) used with Unsplash asynchronous Observable objects
 * [Reactive Extensions Library for Javascript rxjs v6](https://rxjs.dev/)
 * [Tailwindcss v2](https://tailwindcss.com/) CSS framework
@@ -96,11 +97,12 @@ photoQuery(): Observable<any> {
 ## :cool: Features
 
 * Lazy-loading of about and contact pages
+* All 3 pages have >90% Lighthouse test scores
 * Tailwind build for production css purge results in a very small styles bundle (about 7kB)
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working Server-Side-Rendered PWA.
+* Status: Working Server-Side-Rendered PWA. All files pass linting.
 * To-Do: add splash screens, tests, deploy and add robots file info etc. and redo lighthouse.
 
 ## :clap: Inspiration

@@ -14,7 +14,7 @@ export class HomeComponent {
     this.getPhoto();
   }
 
-  onChangePhoto() {
+  onChangePhoto(): void {
     this.getPhoto();
   }
 
