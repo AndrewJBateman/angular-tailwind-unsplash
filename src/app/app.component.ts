@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'angular-tailwind-ratp';
-  version = 'Angular version 12';
+  title = 'angular-tailwind-unsplash';
+  version = 'Angular version 11';
 }

@@ -1,5 +1,6 @@
 <head>
   <meta name="description" content="Home page shows random Unsplash images" />
+  <meta name="theme-color" content="#f5f3f3" />
 </head>
 
 <body class="min-h-screen min-w-screen">
@@ -7,10 +8,9 @@
   <ng-container *ngIf="photoData$ | async as photoData">
     <div class="max-w-xs mx-auto my-4 overflow-hidden shadow-lg info-card">
       <img
-        class="w-full h-auto w-320"
+        class="object-cover"
         width=320
-        height=auto
-        max-height=320
+        height=214
         [src]="photoData.body.urls.small"
         alt="{{ photoData.body.alt_description }}"
         (click)="openLink(photoData.body.urls.full)"

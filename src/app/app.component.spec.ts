@@ -20,9 +20,9 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-tailwind-ratp'`, () => {
+  it(`should have as title 'angular-tailwind-unsplash'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-tailwind-ratp');
+    expect(app.title).toEqual('angular-tailwind-unsplash');
   });
 });

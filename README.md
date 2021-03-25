@@ -38,6 +38,9 @@
 | ![Angular page](./img/home.png) | ![Angular page](./img/about.png) | ![Angular page](./img/contact.png) |
 |:---:|:---:|:---:|
 | Home | About | Contact |
+![Angular page](./img/lighthouse-home.jpg)
+![Angular page](./img/lighthouse-about.jpg)
+![Angular page](./img/lighthouse-contact.jpg)
 
 ## :signal_strength: Technologies
 
@@ -59,7 +62,7 @@
 * `npm run serve:ssr` to run SSR build file
 * Run `npm run build` for a production build with css purging.
 * Run `http-server` to view build on an apple/android phone or simulator (pick 2nd http address supplied)
-* The build artifacts will be stored in the `dist/angular-tailwind-ratp` directory.
+* The build artifacts will be stored in the `dist/angular-tailwind-unsplash` directory.
 
 ## :wrench: Testing
 
@@ -97,8 +100,8 @@ photoQuery(): Observable<any> {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working PWA. Deploy and add robots file info etc. and redo lighthouse.
-* To-Do: tests, publish
+* Status: Working Server-Side-Rendered PWA.
+* To-Do: add splash screens, tests, deploy and add robots file info etc. and redo lighthouse.
 
 ## :clap: Inspiration
 
@@ -106,6 +109,7 @@ photoQuery(): Observable<any> {
 * [StackOverflow: How to solve semi-colon expected css(css-semicolonexpected)](https://stackoverflow.com/questions/61443484/how-to-solve-semi-colon-expected-csscss-semicolonexpected)
 * [dev.to: Setup TailwindCSS in Angular the easy way](https://dev.to/angular/setup-tailwindcss-in-angular-the-easy-way-1i5l)
 * [LogRocket: Types vs. interfaces in TypeScript](https://blog.logrocket.com/types-vs-interfaces-in-typescript/)
+* [Free svg site](https://freesvg.org/) for butterfly svg on about page
 
 ## :envelope: Contact
 

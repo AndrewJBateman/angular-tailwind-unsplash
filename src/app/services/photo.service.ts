@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, take } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 
 import { environment } from '../../environments/environment';
 
 const apiKey = environment.unsplash.UNSPLASH_API_KEY;
-console.log('api key: ', apiKey);
 const httpOptions: {
   headers: any;
   observe: any;
@@ -21,7 +20,6 @@ const httpOptions: {
   params: 'HttpParams',
   responseType: 'json',
 };
-console.log('httpOptions: ', httpOptions);
 
 @Injectable({
   providedIn: 'root',
