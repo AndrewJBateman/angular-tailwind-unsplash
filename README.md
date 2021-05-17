@@ -1,14 +1,12 @@
 # :zap: Angular Tailwind Unsplash
 
-* Angular 11 app using [Tailwindcss](https://developers.google.com/chart/) components to display images from the [Unsplash Images API](https://unsplash.com/developer)
+* Angular app using [Tailwindcss](https://developers.google.com/chart/) components to display images from the [Unsplash Images API](https://unsplash.com/developer)
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-tailwind-unsplash?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/AndrewJBateman/angular-tailwind-unsplash?style=for-the-badge)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-tailwind-unsplash?style=for-the-badge)
-![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-tailwind-unsplash?style=for-the-badge)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/AndrewJBateman/angular-tailwind-unsplash?style=for-the-badge)
-
-*** Note: to open web links in a new window use: _ctrl+click on link_**
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-tailwind-unsplash?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-tailwind-unsplash?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-tailwind-unsplash?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/angular-tailwind-unsplash?style=plastic)
 
 ## :page_facing_up: Table of contents
 
@@ -23,14 +21,15 @@
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
+  * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
 
-* About and Contact pages give more information on app using Tailwind css cards
+* About and Contact pages give more information on app using Tailwind CSS cards
 * To build for production Tailwind’s purge option is used to tree-shake unused styles and optimize final build size.
 * [rxjs take(1) operater](https://advancedweb.hu/rxjs-the-differences-between-first-take-1-and-single/) used to take first element from the Unsplash & Github observable streams then close them, so unsubscribing is not necessary.
-* The Github API does not require an API key. The Unsplash API does.
+* The Github basic user info API does not require an API key. The Unsplash API does.
 * [Angular HttpClient](https://angular.io/api/common/http/HttpClient) GET request response overloads 1 to 15 carefully considered, especially http header 'observe' and 'responseType', to ensure correct response type from photo service which returns type `Observable<ArrayBuffer>` when the Home page function `onChangePhoto()` is expecting interface type `Observable<IUnsplashResponse>`
 
 ## :camera: Screenshots
@@ -96,7 +95,7 @@ photoQuery(): Observable<any> {
 
 ## :cool: Features
 
-* Lazy-loading of about and contact pages
+* Lazy-loading of About and Contact pages
 * All 3 pages have >90% Lighthouse test scores
 * Tailwind build for production css purge results in a very small styles bundle (about 7kB)
 
@@ -112,7 +111,12 @@ photoQuery(): Observable<any> {
 * [dev.to: Setup TailwindCSS in Angular the easy way](https://dev.to/angular/setup-tailwindcss-in-angular-the-easy-way-1i5l)
 * [LogRocket: Types vs. interfaces in TypeScript](https://blog.logrocket.com/types-vs-interfaces-in-typescript/)
 * [Free svg site](https://freesvg.org/) for butterfly svg on about page
+* [Stackoverflow: How to add rel=“preconnect” to tags other than link?](https://stackoverflow.com/questions/54900054/how-to-add-rel-preconnect-to-tags-other-than-link)
+
+## :file_folder: License
+
+* This project is licensed under the terms of the MIT license.
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com

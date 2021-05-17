@@ -33,6 +33,7 @@
       aria-label="about nav link"
       routerLink="/about"
       routerLinkActive="nav-link-active"
+      [routerLinkActiveOptions]="{ exact: true }"
       >About</a
     >
     <a
@@ -40,6 +41,7 @@
       aria-label="contact nav link"
       routerLink="/contact"
       routerLinkActive="nav-link-active"
+      [routerLinkActiveOptions]="{ exact: true }"
       >Contact</a
     >
   </div>
