@@ -13,7 +13,7 @@ const httpOptions: {
   responseType: any;
 } = {
   headers: new HttpHeaders({
-    Authorization: apiKey,
+    Authorization: 'Client-ID ' + apiKey,
     'Content-Type': 'application/json',
   }),
   observe: 'response',

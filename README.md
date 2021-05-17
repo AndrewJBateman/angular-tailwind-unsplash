@@ -56,6 +56,8 @@
 ## :floppy_disk: Setup
 
 * Run `npm i` to install dependencies.
+* Get yourself an [Unsplash Login & API Key](https://unsplash.com/developers).
+* Add API key to the `environments.ts` file
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 * `npm run dev:ssr` to render app on local express server (SSR)
 * `npm run build:ssr` to create build file with SSR, then add defer to styles file in `index.html`
@@ -101,8 +103,8 @@ photoQuery(): Observable<any> {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working Server-Side-Rendered PWA. All files pass linting.
-* To-Do: add splash screens, tests, deploy and add robots file info etc. and redo lighthouse.
+* Status: Working Server-Side-Rendered PWA. All files pass linting. Minor error with Unsplash samesite attributes to fix.
+* To-Do: add splash screens, tests, deploy and replace robots file info etc. and redo lighthouse.
 
 ## :clap: Inspiration
 
