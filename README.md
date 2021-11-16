@@ -44,9 +44,9 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v12](https://angular.io/)
-* [Angular PWA v12](https://angular.io/guide/service-worker-getting-started) - app uses service workers so app will stay up if there is a loss of network - all necessary files are cached, including index.html, icons etc.
-* [Server-side rendering (SSR) with Angular Universal v11](https://angular.io/guide/universal) to render app on an express.js server
+* [Angular framework v13](https://angular.io/)
+* [Angular PWA v13](https://angular.io/guide/service-worker-getting-started) - app uses service workers so app will stay up if there is a loss of network - all necessary files are cached, including index.html, icons etc.
+* [Server-side rendering (SSR) with Angular Universal v12](https://angular.io/guide/universal) to render app on an express.js server
 * [Angular async pipes](https://angular.io/api/common/AsyncPipe) used with Unsplash asynchronous Observable objects
 * [Reactive Extensions Library for Javascript rxjs v6](https://rxjs.dev/)
 * [Tailwindcss v2](https://tailwindcss.com/) CSS framework
