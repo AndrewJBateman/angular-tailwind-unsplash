@@ -46,10 +46,10 @@
 
 * [Angular framework v13](https://angular.io/)
 * [Angular PWA v13](https://angular.io/guide/service-worker-getting-started) - app uses service workers so app will stay up if there is a loss of network - all necessary files are cached, including index.html, icons etc.
-* [Server-side rendering (SSR) with Angular Universal v12](https://angular.io/guide/universal) to render app on an express.js server
+* [Server-side rendering (SSR) with Angular Universal v13](https://angular.io/guide/universal) to render app on an express.js server
 * [Angular async pipes](https://angular.io/api/common/AsyncPipe) used with Unsplash asynchronous Observable objects
-* [Reactive Extensions Library for Javascript rxjs v6](https://rxjs.dev/)
-* [Tailwindcss v2](https://tailwindcss.com/) CSS framework
+* [Reactive Extensions Library for Javascript rxjs v7](https://rxjs.dev/)
+* [Tailwindcss v3](https://tailwindcss.com/) CSS framework
 * [http-server](https://www.npmjs.com/package/http-server) command-line http server to view the PWA
 * [Netlify CLI](https://www.npmjs.com/package/netlify-cli) to deploy app on Netlify
 
@@ -68,9 +68,9 @@
 
 ## :wrench: Testing
 
-* Run `ng lint` to lint all files using tslint
+* Run `ng lint` to lint all files using tba
 * Run `ng test` to run Jasmine unit tests via [Karma](https://karma-runner.github.io). Currrently 9/9 tests pass
-* Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). Currently 0 tests so all pass
+* Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). Currently no tests so pass
 
 ## :computer: Code Examples
 
@@ -86,9 +86,11 @@ photoQuery(): Observable<any> {
     .pipe(
       take(1),
       catchError((err) => {
-        return throwError(
-          'There was a problem fetching user data from Github API, error: ',
-          err
+        return throwError(() =>
+          console.log(
+            'There was a problem fetching data from the Unsplash API, error: ',
+            err
+          )
         );
       })
     );
@@ -104,7 +106,7 @@ photoQuery(): Observable<any> {
 ## :clipboard: Status & To-Do List
 
 * Status: Working Server-Side-Rendered PWA. All files pass linting. Minor error with Unsplash samesite attributes to fix.
-* To-Do: add splash screens, tests, deploy and replace robots file info etc. and redo lighthouse.
+* To-Do: add eslint, splash screens, tests, deploy and replace robots file info etc. and redo lighthouse.
 
 ## :clap: Inspiration
 
