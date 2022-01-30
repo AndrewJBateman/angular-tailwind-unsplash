@@ -24,9 +24,11 @@ export class GithubService {
         take(1),
         share(),
         catchError((err) => {
-          return throwError(
-            'There was a problem fetching user data from Github API, error: ',
-            err
+          return throwError(() =>
+            console.log(
+              'There was a problem fetching data from the Github API, error: ',
+              err
+            )
           );
         })
       );
