@@ -40,8 +40,8 @@ export class PhotoService {
         catchError((err) => {
           return throwError(() =>
             console.log(
-              'There was a problem fetching data from the Unsplash API, error: ',
-              err
+              'There was a problem fetching data from the Unsplash API: ',
+              err.error.errors.toString()
             )
           );
         })
