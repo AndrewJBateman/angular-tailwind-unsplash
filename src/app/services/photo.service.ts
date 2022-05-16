@@ -3,9 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, take } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 
-import { environment } from '../../environments/environment';
+const apiKey = process.env.UNSPLASH_API_KEY;
 
-const apiKey = environment.UNSPLASH_API_KEY;
 const httpOptions: {
   headers: any;
   observe: any;
