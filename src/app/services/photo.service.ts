@@ -5,7 +5,7 @@ import { Observable, throwError } from 'rxjs';
 
 import { environment } from '../../environments/environment';
 
-const apiKey = environment.unsplash.UNSPLASH_API_KEY;
+const apiKey = environment.UNSPLASH_API_KEY;
 const httpOptions: {
   headers: any;
   observe: any;
