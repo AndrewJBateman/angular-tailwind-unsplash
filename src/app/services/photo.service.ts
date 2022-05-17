@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, take } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
-
-const apiKey = process.env.UNSPLASH_API_KEY;
+import { environment } from '../../environments/environment';
 
 const httpOptions: {
   headers: any;
@@ -12,7 +11,7 @@ const httpOptions: {
   responseType: any;
 } = {
   headers: new HttpHeaders({
-    Authorization: 'Client-ID ' + apiKey,
+    Authorization: 'Client-ID ' + environment.unsplash.UNSPLASH_API_KEY,
     'Content-Type': 'application/json',
   }),
   observe: 'response',
