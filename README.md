@@ -1,6 +1,6 @@
 # :zap: Angular Tailwind Unsplash
 
-* Angular app using [Tailwindcss](https://developers.google.com/chart/) components to display images from the [Unsplash Images API](https://unsplash.com/developer)
+* Angular app using [TailwindCSS](https://developers.google.com/chart/) components to display images from the [Unsplash Images API](https://unsplash.com/developer)
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-tailwind-unsplash?style=plastic)
@@ -49,7 +49,7 @@
 * [Server-side rendering (SSR) with Angular Universal v13](https://angular.io/guide/universal) to render app on an express.js server
 * [Angular async pipes](https://angular.io/api/common/AsyncPipe) used with Unsplash asynchronous Observable objects
 * [Reactive Extensions Library for Javascript rxjs v7](https://rxjs.dev/)
-* [Tailwindcss v3](https://tailwindcss.com/) CSS framework
+* [TailwindCSS v3](https://tailwindcss.com/) CSS framework
 * [http-server](https://www.npmjs.com/package/http-server) command-line http server to view the PWA
 * [Netlify CLI](https://www.npmjs.com/package/netlify-cli) to deploy app on Netlify
 
@@ -62,6 +62,7 @@
 * `npm run dev:ssr` to render app on local express server (SSR)
 * `npm run build:ssr` to create build file with SSR, then add defer to styles file in `index.html`
 * `npm run serve:ssr` to run SSR build file
+* `npm run prerender` to create prerendered build file
 * Run `npm run build` for a production build with css purging.
 * Run `http-server` to view build on an apple/android phone or simulator (pick 2nd http address supplied)
 * The build artifacts will be stored in the `dist/angular-tailwind-unsplash` directory.
@@ -106,7 +107,7 @@ photoQuery(): Observable<any> {
 ## :clipboard: Status & To-Do List
 
 * Status: Working Server-Side-Rendered PWA. All files pass linting. Minor error with Unsplash samesite attributes to fix.
-* To-Do: add eslint, splash screens, tests, deploy and replace robots file info etc. and redo lighthouse.
+* To-Do: Deploy (env. variable add to Netlify), add eslint, splash screens, tests, replace robots file info etc. and redo lighthouse.
 
 ## :clap: Inspiration
 
