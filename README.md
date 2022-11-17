@@ -28,7 +28,7 @@
 
 * About and Contact pages give more information on app using Tailwind CSS cards
 * To build for production Tailwind’s purge option is used to tree-shake unused styles and optimize final build size.
-* [rxjs take(1) operater](https://advancedweb.hu/rxjs-the-differences-between-first-take-1-and-single/) used to take first element from the Unsplash & Github observable streams then close them, so unsubscribing is not necessary.
+* [RxJS take(1) operater](https://advancedweb.hu/rxjs-the-differences-between-first-take-1-and-single/) used to take first element from the Unsplash & Github observable streams then close them, so unsubscribing is not necessary.
 * The Github basic user info API does not require an API key. The Unsplash API does.
 * [Angular HttpClient](https://angular.io/api/common/http/HttpClient) GET request response overloads 1 to 15 carefully considered, especially http header 'observe' and 'responseType', to ensure correct response type from photo service which returns type `Observable<ArrayBuffer>` when the Home page function `onChangePhoto()` is expecting interface type `Observable<IUnsplashResponse>`
 
@@ -48,9 +48,9 @@
 * [Angular PWA v14](https://angular.io/guide/service-worker-getting-started) - app uses service workers so app will stay up if there is a loss of network - all necessary files are cached, including index.html, icons etc.
 * [Server-side rendering (SSR) with Angular Universal v14](https://angular.io/guide/universal) to render app on an express.js server
 * [Angular async pipes](https://angular.io/api/common/AsyncPipe) used with Unsplash asynchronous Observable objects
-* [Reactive Extensions Library for Javascript rxjs v7](https://rxjs.dev/)
+* [Reactive Extensions Library for Javascript RxJS v7](https://rxjs.dev/)
 * [TailwindCSS v3](https://tailwindcss.com/) CSS framework
-* [http-server v14](https://www.npmjs.com/package/http-server) command-line http server to view the PWA
+* [http-server v14](https://www.npmjs.com/package/http-server) command-line HTTP server to view the PWA
 * [Netlify CLI](https://www.npmjs.com/package/netlify-cli) to deploy app on Netlify
 
 ## :floppy_disk: Setup
@@ -63,7 +63,7 @@
 * `npm run build:ssr` to create build file with SSR, then add defer to styles file in `index.html`
 * `npm run serve:ssr` to run SSR build file
 * `npm run prerender` to create prerendered build file
-* Run `npm run build` for a production build with css purging.
+* Run `npm run build` for a production build with CSS purging.
 * Run `http-server` to view build on an apple/android phone or simulator (pick 2nd http address supplied)
 * The build artifacts will be stored in the `dist/angular-tailwind-unsplash` directory.
 
@@ -107,7 +107,7 @@ photoQuery(): Observable<any> {
 ## :clipboard: Status & To-Do List
 
 * Status: Working Server-Side-Rendered PWA. All files pass linting. Minor error with Unsplash samesite attributes to fix.
-* To-Do: Deploy (env. variable add to Netlify), add eslint, splash screens, tests, replace robots file info etc. and redo lighthouse.
+* To-Do: Add CSP. Deploy (env. variable add to Netlify), add eslint, splash screens, tests, replace robots file info etc. and redo lighthouse.
 
 ## :clap: Inspiration
 

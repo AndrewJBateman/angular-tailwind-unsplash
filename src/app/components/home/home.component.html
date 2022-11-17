@@ -9,8 +9,8 @@
     <div class="max-w-xs mx-auto my-4 overflow-hidden shadow-lg info-card">
       <img
         class="object-cover"
-        width=320
-        height=214
+        width="320"
+        height="214"
         [src]="photoData.body.urls.small"
         alt="{{ photoData.body.alt_description }}"
         (click)="openLink(photoData.body.urls.full)"
@@ -33,7 +33,9 @@
           </p>
         </ng-template>
         <ng-template #noDescription>
-          <p class="p-2 text-base text-center rounded-md shadow-lg text-grey-darker">
+          <p
+            class="p-2 text-base text-center rounded-md shadow-lg text-grey-darker"
+          >
             "No description supplied - a photo without words"
           </p>
         </ng-template>
@@ -45,19 +47,16 @@
             photoData.body.user.first_name || photoData.body.user.last_name
           "
         >
-          <span class="text-blue-900 ">By: </span>{{ photoData.body.user.first_name }}
+          <span class="text-blue-900">By: </span
+          >{{ photoData.body.user.first_name }}
           {{ photoData.body.user.last_name }}
         </div>
 
         <!--location-->
-        <div
-          class="text-center"
-          *ngIf="photoData.body.location.name != null"
-        >
-          <span
-            class="inline-block text-grey-darker"
-          >
-            <span class="text-blue-900">Location: </span>{{ photoData.body.location.name }}</span
+        <div class="text-center" *ngIf="photoData.body.location.name != null">
+          <span class="inline-block text-grey-darker">
+            <span class="text-blue-900">Location: </span
+            >{{ photoData.body.location.name }}</span
           >
         </div>
       </div>
