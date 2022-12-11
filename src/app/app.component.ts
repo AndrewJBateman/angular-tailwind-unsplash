@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-tailwind-unsplash';
-  version = 'Angular version 11';
 }
