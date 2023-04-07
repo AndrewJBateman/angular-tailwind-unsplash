@@ -11,15 +11,11 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    loadChildren: () =>
-      import('./components/about/about.module').then((mod) => mod.AboutModule),
+    loadChildren: () => import('./components/about/about.module'),
   },
   {
     path: 'contact',
-    loadChildren: () =>
-      import('./components/contact/contact.module').then(
-        (mod) => mod.ContactModule
-      ),
+    loadChildren: () => import('./components/contact/contact.module'),
   },
   { path: '**', component: NotFoundComponent },
 ];
