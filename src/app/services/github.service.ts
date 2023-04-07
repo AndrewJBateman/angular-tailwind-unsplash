@@ -11,7 +11,7 @@ const baseUrl = 'https://api.github.com/users/';
   providedIn: 'root',
 })
 export class GithubService {
-  private userData: any;
+  private userData: Observable<User> = new Observable<User>();
 
   constructor(private http: HttpClient) {}
 
