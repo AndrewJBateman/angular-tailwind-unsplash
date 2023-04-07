@@ -11,17 +11,17 @@
 ## :page_facing_up: Table of contents
 
 * [:zap: Angular Tailwind Unsplash](#zap-angular-tailwind-unsplash)
-  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:page\_facing\_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
-  * [:signal_strength: Technologies](#signal_strength-technologies)
-  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:signal\_strength: Technologies](#signal_strength-technologies)
+  * [:floppy\_disk: Setup](#floppy_disk-setup)
   * [:wrench: Testing](#wrench-testing)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
-  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clipboard: Status \& To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
-  * [:file_folder: License](#file_folder-license)
+  * [:file\_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -44,8 +44,8 @@
 
 ## :signal_strength: Technologies
 
-* [Angular framework v15](https://angular.io/)
-* [Angular PWA v15](https://angular.io/guide/service-worker-getting-started) - app uses service workers so app will stay up if there is a loss of network - all necessary files are cached, including index.html, icons etc.
+* [Angular framework v16](https://angular.io/)
+* [Angular PWA v16](https://angular.io/guide/service-worker-getting-started) - app uses service workers so app will stay up if there is a loss of network - all necessary files are cached, including index.html, icons etc.
 * [Server-side rendering (SSR) with Angular Universal v15](https://angular.io/guide/universal) to render app on an express.js server
 * [Angular async pipes](https://angular.io/api/common/AsyncPipe) used with Unsplash asynchronous Observable objects
 * [Reactive Extensions Library for Javascript RxJS v7](https://rxjs.dev/)
@@ -69,9 +69,7 @@
 
 ## :wrench: Testing
 
-* Run `ng lint` to lint all files using tba
-* Run `ng test` to run Jasmine unit tests via [Karma](https://karma-runner.github.io). Currrently 9/9 tests pass
-* Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). Currently no tests so pass
+* No tests set up
 
 ## :computer: Code Examples
 
