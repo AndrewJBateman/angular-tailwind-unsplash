@@ -1,48 +1,46 @@
 <head>
-  <meta name="theme-color" content="#f5f3f3" />
+	<meta name="theme-color" content="#f5f3f3" />
 </head>
 
 <nav
-  class="flex flex-row content-center justify-between w-full font-sans text-center shadow sm:items-baseline"
->
-  <!--navbar LHS-->
-  <div class="self-center">
-    <a
-      class="nav-link"
-      aria-label="home nav link"
-      routerLink="/"
-      routerLinkActive="nav-link-active"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      <div class="flex mx-2">
-        <img
-          class="mx-2"
-          src="./../../../assets/unsplash.png"
-          width="30" height="30"
-          alt="Unsplash image of butterfly"
-        />
-        <p class="pt-1">Unsplash</p>
-      </div>
-    </a>
-  </div>
+	class="flex flex-row content-center justify-between w-full font-sans text-center shadow sm:items-baseline">
+	<!--navbar LHS-->
+	<div class="self-center">
+		<a
+			class="nav-link"
+			aria-label="home nav link"
+			routerLink="/"
+			routerLinkActive="nav-link-active"
+			[routerLinkActiveOptions]="{ exact: true }">
+			<div class="flex mx-2">
+				<img
+					class="mx-2"
+					src="./../../../assets/unsplash.png"
+					width="30"
+					height="30"
+					alt="Unsplash image of butterfly" />
+				<p class="pt-1">Unsplash</p>
+			</div>
+		</a>
+	</div>
 
-  <!--navbar RHS-->
-  <div class="self-center">
-    <a
-      class="nav-right nav-link"
-      aria-label="about nav link"
-      routerLink="/about"
-      routerLinkActive="nav-link-active"
-      [routerLinkActiveOptions]="{ exact: true }"
-      >About</a
-    >
-    <a
-      class="nav-right nav-link"
-      aria-label="contact nav link"
-      routerLink="/contact"
-      routerLinkActive="nav-link-active"
-      [routerLinkActiveOptions]="{ exact: true }"
-      >Contact</a
-    >
-  </div>
+	<!--navbar RHS-->
+	<div class="self-center">
+		<a
+			class="nav-right nav-link"
+			aria-label="about nav link"
+			routerLink="/about"
+			routerLinkActive="nav-link-active"
+			[routerLinkActiveOptions]="{ exact: true }"
+			>About</a
+		>
+		<a
+			class="nav-right nav-link"
+			aria-label="contact nav link"
+			routerLink="/contact"
+			routerLinkActive="nav-link-active"
+			[routerLinkActiveOptions]="{ exact: true }"
+			>Contact</a
+		>
+	</div>
 </nav>

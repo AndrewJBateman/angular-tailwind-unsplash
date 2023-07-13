@@ -13,15 +13,17 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, HomeComponent, NotFoundComponent],
-  imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+	declarations: [AppComponent, NavComponent, HomeComponent, NotFoundComponent],
+	imports: [
+		BrowserModule.withServerTransition({ appId: 'serverApp' }),
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		HttpClientModule,
+		ServiceWorkerModule.register('ngsw-worker.js', {
+			enabled: environment.production,
+		}),
+	],
+	providers: [],
+	bootstrap: [AppComponent],
 })
 export class AppModule {}

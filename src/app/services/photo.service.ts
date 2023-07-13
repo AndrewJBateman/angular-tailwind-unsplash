@@ -5,44 +5,44 @@ import { Observable, throwError } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 const httpOptions: {
-  headers: any;
-  observe: any;
-  params: any;
-  responseType: any;
+	headers: any;
+	observe: any;
+	params: any;
+	responseType: any;
 } = {
-  headers: new HttpHeaders({
-    Authorization: 'Client-ID ' + environment.unsplash.UNSPLASH_API_KEY,
-    'Content-Type': 'application/json',
-  }),
-  observe: 'response',
-  params: 'HttpParams',
-  responseType: 'json',
+	headers: new HttpHeaders({
+		Authorization: 'Client-ID ' + environment.unsplash.UNSPLASH_API_KEY,
+		'Content-Type': 'application/json',
+	}),
+	observe: 'response',
+	params: 'HttpParams',
+	responseType: 'json',
 };
 
 @Injectable({
-  providedIn: 'root',
+	providedIn: 'root',
 })
 export class PhotoService {
-  readonly baseUrl = 'https://api.unsplash.com';
+	readonly baseUrl = 'https://api.unsplash.com';
 
-  constructor(private http: HttpClient) {}
+	constructor(private http: HttpClient) {}
 
-  photoQuery(): Observable<any> {
-    return this.http
-      .get(
-        `${this.baseUrl}/photos/random?query=butterflies&orientation=landscape`,
-        httpOptions
-      )
-      .pipe(
-        take(1),
-        catchError((err) => {
-          return throwError(() =>
-            console.log(
-              'There was a problem fetching data from the Unsplash API: ',
-              err.error.errors.toString()
-            )
-          );
-        })
-      );
-  }
+	photoQuery(): Observable<any> {
+		return this.http
+			.get(
+				`${this.baseUrl}/photos/random?query=butterflies&orientation=landscape`,
+				httpOptions
+			)
+			.pipe(
+				take(1),
+				catchError(err => {
+					return throwError(() =>
+						console.log(
+							'There was a problem fetching data from the Unsplash API: ',
+							err.error.errors.toString()
+						)
+					);
+				})
+			);
+	}
 }
