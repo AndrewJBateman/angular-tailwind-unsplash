@@ -104,7 +104,7 @@ photoQuery(): Observable<any> {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working Server-Side-Rendered PWA. All files pass linting. Minor error with Unsplash samesite attributes to fix.
+* Status: Working Server-Side-Rendered PWA. All files pass linting. Minor error with Unsplash samesite attributes to fix. Github data not showing on Contact page.
 * To-Do: Add CSP. Deploy (env. variable add to Netlify), add eslint, splash screens, tests, replace robots file info etc. and redo lighthouse.
 
 ## :clap: Inspiration
@@ -122,4 +122,4 @@ photoQuery(): Observable<any> {
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: `gomezbateman@yahoo.com`
