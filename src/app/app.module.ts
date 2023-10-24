@@ -1,4 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
+import {
+	BrowserModule,
+	provideClientHydration,
+} from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,7 +18,7 @@ import { environment } from '../environments/environment';
 @NgModule({
 	declarations: [AppComponent, NavComponent, HomeComponent, NotFoundComponent],
 	imports: [
-		BrowserModule.withServerTransition({ appId: 'serverApp' }),
+		BrowserModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
 		HttpClientModule,
@@ -23,7 +26,7 @@ import { environment } from '../environments/environment';
 			enabled: environment.production,
 		}),
 	],
-	providers: [],
+	providers: [provideClientHydration()],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}
