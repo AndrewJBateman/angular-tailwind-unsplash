@@ -31,6 +31,7 @@
 * [RxJS take(1) operater](https://advancedweb.hu/rxjs-the-differences-between-first-take-1-and-single/) used to take first element from the Unsplash & Github observable streams then close them, so unsubscribing is not necessary.
 * The Github basic user info API does not require an API key. The Unsplash API does.
 * [Angular HttpClient](https://angular.io/api/common/http/HttpClient) GET request response overloads 1 to 15 carefully considered, especially http header 'observe' and 'responseType', to ensure correct response type from photo service which returns type `Observable<ArrayBuffer>` when the Home page function `onChangePhoto()` is expecting interface type `Observable<IUnsplashResponse>`
+* [Angular Hydration](https://angular.io/guide/hydration) added. "Hydration is the process that restores the server side rendered application on the client. This includes things like reusing the server rendered DOM structures, persisting the application state, transferring application data that was retrieved already by the server, and other processes."
 
 ## :camera: Screenshots
 
@@ -46,7 +47,7 @@
 
 * [Angular framework v16](https://angular.io/)
 * [Angular PWA v16](https://angular.io/guide/service-worker-getting-started) - app uses service workers so app will stay up if there is a loss of network - all necessary files are cached, including index.html, icons etc.
-* [Server-side rendering (SSR) with Angular Universal v15](https://angular.io/guide/universal) to render app on an express.js server
+* [Server-side rendering (SSR) with Angular Universal v16](https://angular.io/guide/universal) to render app on an express.js server
 * [Angular async pipes](https://angular.io/api/common/AsyncPipe) used with Unsplash asynchronous Observable objects
 * [Reactive Extensions Library for Javascript RxJS v7](https://rxjs.dev/)
 * [TailwindCSS v3](https://tailwindcss.com/) CSS framework
@@ -60,7 +61,7 @@
 * Add API key to the `environments.ts` file
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 * `npm run dev:ssr` to render app on local express server (SSR)
-* `npm run build:ssr` to create build file with SSR, then add defer to styles file in `index.html`
+* `npm run build:ssr` to create build file with SSR
 * `npm run serve:ssr` to run SSR build file
 * `npm run prerender` to create prerendered build file
 * Run `npm run build` for a production build with CSS purging.
@@ -100,12 +101,12 @@ photoQuery(): Observable<any> {
 
 * Lazy-loading of About and Contact pages
 * All 3 pages have >90% Lighthouse test scores
-* Tailwind build for production css purge results in a very small styles bundle (about 7kB)
+* Tailwind build for production CSS purge results in a very small styles bundle (about 7kB)
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working Server-Side-Rendered PWA. All files pass linting. Minor error with Unsplash samesite attributes to fix. Github data not showing on Contact page.
-* To-Do: Add CSP. Deploy (env. variable add to Netlify), add eslint, splash screens, tests, replace robots file info etc. and redo lighthouse.
+* Status: Working Server-Side-Rendered PWA. All files pass linting. Minor error with Unsplash samesite attributes to fix. Unsplash API key not being passed through to SSR during build so auth error in SSR version.
+* To-Do: Fis SSR auth error. Add CSP. Deploy (env. variable add to Netlify), add eslint, splash screens, tests, replace robots file info etc. and redo lighthouse.
 
 ## :clap: Inspiration
 
