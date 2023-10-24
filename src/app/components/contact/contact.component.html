@@ -4,7 +4,7 @@
 </head>
 
 <body class="min-h-screen min-w-screen">
-	<ng-container *ngIf="user$ | async as user">
+	<ng-container *ngIf="user$ | async as user; else loading">
 		<div class="flex justify-center w-full h-screen pt-10 mx-auto">
 			<div class="max-w-xs">
 				<div class="shadow-xl info-card">
@@ -78,4 +78,7 @@
 			</div>
 		</div>
 	</ng-container>
+	<ng-template #loading>
+		<p>Loading...</p>
+	</ng-template>
 </body>
