@@ -75,18 +75,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-tailwind-unsplash:build"
+            "buildTarget": "angular-tailwind-unsplash:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-tailwind-unsplash:build:production"
+              "buildTarget": "angular-tailwind-unsplash:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-tailwind-unsplash:build"
+            "buildTarget": "angular-tailwind-unsplash:build"
           }
         },
         "test": {
@@ -143,7 +143,7 @@
           }
         },
         "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
+          "builder": "@angular-devkit/build-angular:ssr-dev-server",
           "options": {
             "browserTarget": "angular-tailwind-unsplash:build",
             "serverTarget": "angular-tailwind-unsplash:server"
@@ -156,7 +156,7 @@
           }
         },
         "prerender": {
-          "builder": "@nguniversal/builders:prerender",
+          "builder": "@angular-devkit/build-angular:prerender",
           "options": {
             "browserTarget": "angular-tailwind-unsplash:build:production",
             "serverTarget": "angular-tailwind-unsplash:server:production",
