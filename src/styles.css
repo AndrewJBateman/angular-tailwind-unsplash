@@ -1,33 +1,33 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 @layer components {
-  nav {
-    border-bottom: 4px solid #000c66;
-    background: #f5f3f3;
-    height: 4rem;
-  }
+	nav {
+		border-bottom: 4px solid #000c66;
+		background: #f5f3f3;
+		height: 4rem;
+	}
 
-  .nav-link {
-    color: #000c66 !important;
-    @apply mx-2;
-  }
+	.nav-link {
+		color: #000c66 !important;
+		@apply mx-2;
+	}
 
-  .nav-right {
-    @apply mx-4 rounded hover:bg-gray-50;
-  }
+	.nav-right {
+		@apply mx-4 rounded hover:bg-gray-50;
+	}
 
-  .nav-link-active {
-    color: #0000ff !important;
-  }
+	.nav-link-active {
+		color: #0000ff !important;
+	}
 
-  .unsplash-blue {
-    background-color: #7ec8e3;
-  }
+	.unsplash-blue {
+		background-color: #7ec8e3;
+	}
 
-  .info-card {
-    background-color: #f5f3f3;
-    @apply rounded-lg shadow-lg
-  }
+	.info-card {
+		background-color: #f5f3f3;
+		@apply rounded-lg shadow-lg;
+	}
 }
