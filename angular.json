@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:browser-esbuild",
           "options": {
             "outputPath": "dist/angular-tailwind-unsplash/browser",
             "index": "src/index.html",
@@ -87,55 +87,6 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "buildTarget": "angular-tailwind-unsplash:build"
-          }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/angular-tailwind-unsplash/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json",
-            "sourceMap": true,
-            "optimization": false
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "sourceMap": false,
-              "optimization": true
-            }
-          }
-        },
-        "serve-ssr": {
-          "builder": "@angular-devkit/build-angular:ssr-dev-server",
-          "options": {
-            "browserTarget": "angular-tailwind-unsplash:build",
-            "serverTarget": "angular-tailwind-unsplash:server"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "angular-tailwind-unsplash:build:production",
-              "serverTarget": "angular-tailwind-unsplash:server:production"
-            }
-          }
-        },
-        "prerender": {
-          "builder": "@angular-devkit/build-angular:prerender",
-          "options": {
-            "browserTarget": "angular-tailwind-unsplash:build:production",
-            "serverTarget": "angular-tailwind-unsplash:server:production",
-            "routes": [
-              "/"
-            ]
-          },
-          "configurations": {
-            "production": {}
           }
         },
         "lint": {
