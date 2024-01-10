@@ -1,3 +1,9 @@
+<!--HTML template for displaying a random Unsplash image on a webpage.
+  It uses Angular's async pipe to display the image data from an observable.
+  The image is displayed with its description, photographer's name, and location (if available).
+  There is also a button to change the displayed photo.
+  The code snippet is enclosed in a div with the class "info-card" and has various CSS
+  classes for styling.-->
 <head>
 	<meta name="description" content="Home page shows random Unsplash images" />
 	<meta name="theme-color" content="#f5f3f3" />
@@ -14,8 +20,8 @@
 				height="214"
 				[src]="photoData.body.urls.small"
 				alt="{{ photoData.body.alt_description }}"
-				(onClick)="openLink(photoData.body.urls.full)"
-				(onKeyUp)="openLink(photoData.body.urls.full)" />
+				ngClick="openLink(photoData.body.urls.full)"
+				ngKeyup="openLink(photoData.body.urls.full)" />
 			<div class="items-center px-4 py-4">
 				<!--description of photo-->
 				@if (photoData.body.description !== null) {
@@ -57,6 +63,7 @@
 			<!--button to change photo-->
 			<div class="px-4 py-4 text-center">
 				<button
+					type="button"
 					(click)="getPhoto()"
 					class="px-2 py-2 text-white bg-blue-900 border-b-4 border-l-2 border-blue-800 rounded-lg shadow-lg w-full/2 focus:outline-none">
 					Change photo
