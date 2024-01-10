@@ -44,6 +44,7 @@ export class HomeComponent {
 	 * Retrieves the photo data from the photo service.
 	 */
 	getPhoto(): void {
-		this.photoData$ = this.photoService.photoQuery();
+		const options = { query: 'butterflies', orientation: 'landscape' };
+		this.photoData$ = this.photoService.photoQuery(options);
 	}
 }
