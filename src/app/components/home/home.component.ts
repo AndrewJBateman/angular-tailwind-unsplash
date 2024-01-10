@@ -2,10 +2,13 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IUnsplashResponse } from 'src/app/models/unsplash';
 import { PhotoService } from '../../services/photo.service';
+import { NgIf, AsyncPipe } from '@angular/common';
 
 @Component({
 	selector: 'app-home',
 	templateUrl: './home.component.html',
+	standalone: true,
+	imports: [NgIf, AsyncPipe],
 })
 export class HomeComponent {
 	photoData$: Observable<IUnsplashResponse> = new Observable();

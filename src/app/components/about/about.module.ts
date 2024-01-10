@@ -5,8 +5,7 @@ import { AboutComponent } from './about.component';
 import { AboutRoutingModule } from './about-routing.module';
 
 @NgModule({
-	imports: [CommonModule, AboutRoutingModule],
+	imports: [CommonModule, AboutRoutingModule, AboutComponent],
 	exports: [AboutComponent],
-	declarations: [AboutComponent],
 })
 export default class AboutModule {}

@@ -13,7 +13,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 @NgModule({
-	declarations: [AppComponent, NavComponent, HomeComponent, NotFoundComponent],
+	declarations: [AppComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -22,6 +22,9 @@ import { environment } from '../environments/environment';
 		ServiceWorkerModule.register('ngsw-worker.js', {
 			enabled: environment.production,
 		}),
+		NavComponent,
+		HomeComponent,
+		NotFoundComponent,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

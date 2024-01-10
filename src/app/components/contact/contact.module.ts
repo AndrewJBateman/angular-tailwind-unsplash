@@ -7,9 +7,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { GithubService } from 'src/app/services/github.service';
 
 @NgModule({
-	imports: [CommonModule, ContactRoutingModule, HttpClientModule],
+	imports: [
+		CommonModule,
+		ContactRoutingModule,
+		HttpClientModule,
+		ContactComponent,
+	],
 	exports: [ContactComponent],
-	declarations: [ContactComponent],
 	providers: [GithubService],
 })
 export default class ContactModule {}
