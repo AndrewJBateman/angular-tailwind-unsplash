@@ -8,7 +8,8 @@
 		"watch": "ng build --watch --configuration development",
 		"lint": "ng lint",
 		"lint:fix": "ng lint --fix",
-		"prettier": "npx prettier --write ."
+		"prettier": "prettier --write .",
+    "test": "ng test"
 	},
 	"private": true,
 	"dependencies": {
@@ -23,8 +24,8 @@
 		"@angular/platform-server": "^17.0.8",
 		"@angular/router": "^17.0.8",
 		"@angular/service-worker": "^17.0.8",
-		"rxjs": "~7.8.1",
-		"zone.js": "~0.14.3"
+		"rxjs": "7.8.1",
+		"zone.js": "0.14.3"
 	},
 	"devDependencies": {
 		"@angular-devkit/build-angular": "^17.0.9",

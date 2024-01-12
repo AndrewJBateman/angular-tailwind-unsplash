@@ -9,6 +9,7 @@ export interface IUnsplashResponse {
 		height: number;
 		color: string;
 		blur_hash: string;
+		breadcrumbs: [];
 		description: string;
 		alt_description: string;
 		urls: {
@@ -24,50 +25,16 @@ export interface IUnsplashResponse {
 			download: string;
 			download_location: string;
 		};
-		categories: any[];
+		location: ILocation;
+		position: {
+			latitude: null;
+			longitude: null;
+		};
 		likes: number;
 		liked_by_user: boolean;
-		current_user_collections: {
-			id: number;
-			title: string;
-			published_at: string;
-			last_collected_at: string;
-			updated_at: string;
-			cover_photo: any;
-			user: any;
-		}[];
-		sponsorship: any;
-		user: {
-			id: string;
-			updated_at: string;
-			username: string;
-			name: string;
-			first_name: string;
-			last_name: string;
-			twitter_username: string | null;
-			portfolio_url: string;
-			bio: string;
-			location: string;
-			links: {
-				self: string;
-				html: string;
-				photos: string;
-				likes: string;
-				portfolio: string;
-				following: string;
-				followers: string;
-			};
-			profile_image: {
-				small: string;
-				medium: string;
-				large: string;
-			};
-			instagram_username: string;
-			total_collections: number;
-			total_likes: number;
-			total_photos: number;
-			accepted_tos: boolean;
-		};
+		current_user_collections: [];
+		sponsorship: null;
+		user: IUser;
 		exif: {
 			make: string;
 			model: string;
@@ -76,23 +43,55 @@ export interface IUnsplashResponse {
 			focal_length: string;
 			iso: number;
 		};
-		location: {
-			title: string;
-			name: string;
-			city: string | null;
-			country: string;
-			position: {
-				latitude: number;
-				longitude: number;
-			};
-		};
 		views: number;
 		downloads: number;
 	};
-	headers: NonNullable<unknown>;
+	headers: IUnsplashResponseHeaders;
 	ok: boolean;
 	status: number;
 	statusText: string;
 	type: number;
 	url: string;
+}
+
+interface IUser {
+	id: string;
+	updated_at: string;
+	username: string;
+	name: string;
+	first_name: string;
+	last_name: string;
+	twitter_username: string | null;
+	portfolio_url: string;
+	bio: string;
+	location: null;
+	links: IUnsplashLinks;
+
+	profile_image: {
+		small: string;
+		medium: string;
+		large: string;
+	};
+	instagram_username: string;
+	total_collections: number;
+	total_likes: number;
+	total_photos: number;
+	accepted_tos: boolean;
+}
+
+interface IUnsplashLinks {
+	self: string;
+	html: string;
+	download: string;
+	download_location: string;
+}
+
+interface ILocation {
+	city: null;
+	country: null;
+	name: null;
+}
+
+interface IUnsplashResponseHeaders {
+	// Define the properties of the headers object here
 }

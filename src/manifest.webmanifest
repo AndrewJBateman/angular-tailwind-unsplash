@@ -1,7 +1,8 @@
 {
-	"name": "angular-tailwind-unsplash",
-	"short_name": "angular-tailwind-unsplash",
-	"theme_color": "#1976d2",
+	"name": "Angular Tailwind Unsplash",
+	"short_name": "ATU",
+	"description": "An Angular application using Tailwind CSS and Unsplash API to display and search for images.",
+	"theme_color": "#808080",
 	"background_color": "#fafafa",
 	"display": "standalone",
 	"scope": "./",
