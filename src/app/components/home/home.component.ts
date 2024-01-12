@@ -20,7 +20,7 @@ import { AsyncPipe } from '@angular/common';
 })
 export class HomeComponent {
 	private photoService = inject(PhotoService);
-	photoData$: Observable<IUnsplashResponse> = new Observable();
+	photoData$!: Observable<IUnsplashResponse>;
 
 	constructor() {
 		this.getPhoto();

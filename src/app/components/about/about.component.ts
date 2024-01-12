@@ -6,13 +6,11 @@
  * The component is standalone and has its own template file.
  */
 import { Component, ViewEncapsulation } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
 	selector: 'app-about',
 	templateUrl: './about.component.html',
 	standalone: true,
-	imports: [CommonModule],
 	encapsulation: ViewEncapsulation.None,
 })
 export class AboutComponent {}
