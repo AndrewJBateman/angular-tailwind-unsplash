@@ -5,6 +5,7 @@
 		"ng": "ng",
 		"start": "ng serve",
 		"build": "ng build --configuration production",
+    "server": "http-server -p 8080 dist/angular-tailwind-unsplash/browser",
 		"watch": "ng build --watch --configuration development",
 		"lint": "ng lint",
 		"lint:fix": "ng lint --fix",

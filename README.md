@@ -60,7 +60,6 @@
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 * Run `npm run build` for a production build with CSS purging.
 * Run `npm run lint` to lint all files and fix where possible
-* Run `http-server` to view build on an apple/android phone or simulator (pick 2nd http address supplied)
 * The build artifacts will be stored in the `dist/angular-tailwind-unsplash` directory.
 
 ## :wrench: Testing
@@ -72,31 +71,35 @@
 * `photo.service.ts` - code to fetch Unsplash photo data and return it as an Observable
 
 ```typescript
-photoQuery(): Observable<any> {
-  return this.http
-    .get(
-      `${this.baseUrl}/photos/random?query=butterflies&orientation=landscape`,
-      httpOptions
-    )
-    .pipe(
-      take(1),
-      catchError((err) => {
-        return throwError(() =>
-          console.log(
-            'There was a problem fetching data from the Unsplash API, error: ',
-            err
-          )
-        );
-      })
-    );
-}
+photoQuery(options: { query: string; orientation: string }): Observable<any> {
+		const queryParams = new HttpParams()
+			.set('query', options.query)
+			.set('orientation', options.orientation);
+
+		return this.http
+			.get(`${this.baseUrl}/photos/random`, {
+				...this.httpOptions,
+				params: queryParams,
+			})
+			.pipe(
+				take(1),
+				tap(data => console.log(data)),
+				catchError(err => {
+					return throwError(
+						() =>
+							`There was a problem fetching data from the Unsplash API: ${err.error.errors.toString()}`
+					);
+				})
+			);
+	}
 ```
 
 ## :cool: Features
 
 * Lazy-loading of About and Contact pages
 * All 3 pages have good Lighthouse test scores
-* Tailwind build for production CSS purge results in a very small styles bundle (about 7kB)
+* Tailwind build for production CSS purge results in a very small styles bundle (about 2.13kB)
+* CodiumAI used to improve and document code
 
 ## :clipboard: Status & To-Do List
 
